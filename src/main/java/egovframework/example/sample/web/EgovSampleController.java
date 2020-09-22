@@ -78,7 +78,7 @@ public class EgovSampleController {
 
 	@RequestMapping(value = "/main.do")
 	public String mainPage() {
-		return "main";
+		return "main.page";
 	}
 
 	@RequestMapping(value = "/egovSampleList.do")

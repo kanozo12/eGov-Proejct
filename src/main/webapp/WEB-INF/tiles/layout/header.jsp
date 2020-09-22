@@ -11,8 +11,8 @@
 			</div>
 
 			<div class="btn_group">
-				<a href="/user/login" class="gray_btn">Login</a> <a
-					href="/user/register" class="yello_btn">Register</a>
+				<a href="/user/login.do" class="gray_btn">Login</a> <a
+					href="/user/register.do" class="yello_btn">Register</a>
 			</div>
 		</div>
 
