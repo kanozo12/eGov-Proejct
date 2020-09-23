@@ -3,9 +3,9 @@ package egovframework.example.sample.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import egovframework.example.domain.UserVO;
 import egovframework.example.sample.service.UserDAO;
 import egovframework.example.sample.service.UserService;
-import egovframework.example.user.domain.UserVO;
 
 @Service
 public class UserServiceImpl implements UserService {

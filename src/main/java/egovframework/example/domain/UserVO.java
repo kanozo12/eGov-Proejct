@@ -1,4 +1,4 @@
-package egovframework.example.user.domain;
+package egovframework.example.domain;
 
 public class UserVO {
 	private String userid;

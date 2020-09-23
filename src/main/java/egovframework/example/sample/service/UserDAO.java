@@ -1,6 +1,6 @@
 package egovframework.example.sample.service;
 
-import egovframework.example.user.domain.UserVO;
+import egovframework.example.domain.UserVO;
 
 public interface UserDAO {
 	public UserVO getUser(String userid);

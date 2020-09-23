@@ -7,61 +7,58 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import egovframework.example.domain.UserVO;
 import egovframework.example.sample.service.UserDAO;
-import egovframework.example.user.domain.UserVO;
 
 @Repository
 public class UserDAOImpl implements UserDAO{
-	@Autowired
-	private SqlSession session;
-
-	private final String ns = "net.kanozo.mappers.UserMapper";
 
 	@Override
 	public UserVO getUser(String userid) {
-		return session.selectOne(ns + ".selectUser", userid);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public UserVO loginUser(String userid, String password) {
-		Map<String, String> loginMap = new HashMap<String, String>();
-		loginMap.put("userid", userid);
-		loginMap.put("password", password);
-
-		return session.selectOne(ns + ".loginUser", loginMap);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public void insertUser(UserVO user) {
-		session.insert(ns + ".insertUser", user);
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void deleteLevelTable() {
-		session.delete(ns + ".clearData");
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void insertLevelData(Integer level, Integer exp) {
-		Map<String, Integer> levelMap = new HashMap<String, Integer>();
-		levelMap.put("level", level);
-		levelMap.put("exp", exp);
-
-		session.insert(ns + ".levelData", levelMap);
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public Integer getRequireExp(Integer level) {
-		return session.selectOne(ns + ".requireExp", level);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public void setLevelAndExp(UserVO user) {
-		session.update(ns + ".setLevelAndExp", user);
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public UserVO getCnt(String userid) {
-		return session.selectOne(ns + ".selectWriteCnt", userid);
+		// TODO Auto-generated method stub
+		return null;
 	}
+	
 }

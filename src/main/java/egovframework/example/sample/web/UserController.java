@@ -7,12 +7,16 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.MultipartFile;
 
+import egovframework.example.domain.LoginDTO;
+import egovframework.example.domain.RegisterDTO;
+import egovframework.example.domain.UserVO;
 import egovframework.example.sample.service.UserService;
-import egovframework.example.user.domain.LoginDTO;
-import egovframework.example.user.domain.UserVO;
+import validator.RegisterValidator;
 
 @Controller
 @RequestMapping("/user/")
@@ -23,6 +27,8 @@ public class UserController {
 
 	@Autowired
 	private UserService service;
+
+	private RegisterValidator validator = new RegisterValidator();
 
 	@RequestMapping(value = "login.do", method = RequestMethod.GET)
 	public String viewLoginPage() {
@@ -50,8 +56,31 @@ public class UserController {
 	}
 
 	@RequestMapping(value = "register.do", method = RequestMethod.GET)
-	public String viewRegisterPage() {
+	public String viewRegisterPage(Model model) {
+		model.addAttribute("registerDTO", new RegisterDTO());
 		return "user/registerPage.page";
+	}
+
+	@RequestMapping(value = "register", method = RequestMethod.POST)
+	public String userRegist(RegisterDTO dto, Errors errors) throws Exception {
+		validator.validate(dto, errors);
+		if (errors.hasErrors()) {
+			return "user/registerPage.page";
+		}
+
+		String uploadPath = context.getRealPath("/WEB-INF/upload");
+		MultipartFile file = dto.getProfileImg();
+//		String upFile = UploadFileUtils.uploadFile(uploadPath, file.getOriginalFilename(), file.getBytes());
+
+		UserVO user = new UserVO();
+//		user.setImg(upFile);
+		user.setName(dto.getUsername());
+		user.setPassword(dto.getPassword());
+		user.setUserid(dto.getUserid());
+
+		service.register(user);
+
+		return "redirect:/"; // 회원가입완료후 메인 페이지로 이동
 	}
 
 }

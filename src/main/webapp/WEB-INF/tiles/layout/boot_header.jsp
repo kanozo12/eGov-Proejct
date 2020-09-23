@@ -29,11 +29,11 @@
 	        </ul>
 	
 	        <c:if test="${empty sessionScope.user}">
-	           <form class="form-inline my-2 my-lg-0" action="/user/login" method="post">
+	           <form class="form-inline my-2 my-lg-0" action="/user/login.do" method="post">
 	               <input class="form-control mr-sm-2" type="text" placeholder="회원아이디" name="userid">
 	               <input class="form-control mr-sm-2" type="password" placeholder="비밀번호" name="password">
 	               <button class="btn btn-outline-success my-2 mr-2 my-sm-0" type="submit">로그인</button>
-	               <a href="/user/register" class="btn btn-outline-info my-2 my-sm-0">회원가입</a>
+	               <a href="/user/register.do" class="btn btn-outline-info my-2 my-sm-0">회원가입</a>
 	           </form>
 	       </c:if>
 	

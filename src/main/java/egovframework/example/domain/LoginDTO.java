@@ -1,4 +1,4 @@
-package egovframework.example.user.domain;
+package egovframework.example.domain;
 
 public class LoginDTO {
 	private String userid;

@@ -1,6 +1,6 @@
 package egovframework.example.sample.service;
 
-import egovframework.example.user.domain.UserVO;
+import egovframework.example.domain.UserVO;
 
 public interface UserService {
 	public UserVO login(String usrid, String password);
