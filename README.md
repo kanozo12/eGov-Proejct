@@ -10,3 +10,5 @@ https://jays-lab.tistory.com/category/Java/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%
 
 https://m.blog.naver.com/PostView.nhn?blogId=bg_ellder&logNo=98758399&proxyReferer=https:%2F%2Fwww.google.com%2F
 url 패턴 변경 .do -> /*
+https://nayoungkim0918.github.io/2019/03/10/Project/PJ-WEB-eGov-04-6/
+게시판 
