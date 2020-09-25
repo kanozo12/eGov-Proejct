@@ -12,4 +12,9 @@ public class UserDAO extends EgovAbstractDAO {
 
 		return (UserVO) select("userDAO.loginUser", vo);
 	}
+
+	public void insertUser(UserVO user) {
+		insert("userDAO.insertUser", user);
+	}
+
 }

@@ -13,7 +13,7 @@ import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 
 @Service("userService")
 public class UserServiceImpl extends EgovAbstractServiceImpl implements UserService {
-	
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
 	// TODO mybatis 사용
@@ -23,6 +23,11 @@ public class UserServiceImpl extends EgovAbstractServiceImpl implements UserServ
 	@Override
 	public UserVO loginUser(UserVO vo) throws Exception {
 		return userDAO.loginUser(vo);
+	}
+
+	@Override
+	public void register(UserVO user) throws Exception {
+		userDAO.register(user);
 	}
 
 }

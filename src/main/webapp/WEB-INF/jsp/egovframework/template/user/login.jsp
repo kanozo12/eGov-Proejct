@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-10 offset-1">
                 <h2>로그인</h2>
-                <form method="post" action="/user/login">
+                <form method="post" action="/user/login.do">
                     <div class="form-group">
                         <label for="userid">이메일(아이디)</label> <input type="email" class="form-control" name="userid"
                             id="userid" placeholder="아이디로 사용할 이메일 주소">

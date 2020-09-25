@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-10 offset-1">
                 <h2>회원 가입</h2>
-                <form method="post" action="/user/register" enctype="multipart/form-data">
+                <form method="post" action="/user/register.do" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="userid">이메일(아이디)</label>
                         <input type="email" class="form-control" name="userid" id="userid"

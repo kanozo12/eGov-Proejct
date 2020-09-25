@@ -80,6 +80,10 @@ public class EgovSampleController {
 	public String mainPage() {
 		return "main.page";
 	}
+	@RequestMapping(value = "/")
+	public String mainPage1() {
+		return "main.page";
+	}
 
 	@RequestMapping(value = "/egovSampleList.do")
 	public String selectSampleList(@ModelAttribute("searchVO") SampleDefaultVO searchVO, ModelMap model)
