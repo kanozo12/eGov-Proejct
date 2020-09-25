@@ -6,5 +6,5 @@ public interface UserService {
 
 	UserVO loginUser(UserVO vo) throws Exception;
 	
-	public void register(UserVO user) throws Exception;
+	void insertUser(UserVO user) throws Exception;
 }

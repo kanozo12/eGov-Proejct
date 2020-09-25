@@ -15,8 +15,10 @@
 
 	<insert id="insertUser">
 		INSERT
-		INTO SPRING_USERS (USERID, NAME, PASSWORD, U_EXP, U_LEVEL, IMG) VALUES (
-		#{userid}, #{name}, #{password}, 0, 1, #{img})
+		INTO SPRING_USERS
+		(USERID, NAME, PASSWORD, U_EXP, U_LEVEL, IMG) VALUES (
+		#{userid},
+		#{name}, #{password}, 0, 1, #{img})
 	</insert>
 
 </mapper>

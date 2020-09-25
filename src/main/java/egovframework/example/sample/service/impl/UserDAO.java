@@ -2,7 +2,6 @@ package egovframework.example.sample.service.impl;
 
 import org.springframework.stereotype.Repository;
 
-import egovframework.example.domain.LoginVO;
 import egovframework.example.domain.UserVO;
 import egovframework.rte.psl.dataaccess.EgovAbstractDAO;
 

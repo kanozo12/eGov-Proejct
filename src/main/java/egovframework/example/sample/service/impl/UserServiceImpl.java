@@ -26,8 +26,8 @@ public class UserServiceImpl extends EgovAbstractServiceImpl implements UserServ
 	}
 
 	@Override
-	public void register(UserVO user) throws Exception {
-		userDAO.register(user);
+	public void insertUser(UserVO user) throws Exception {
+		userDAO.insertUser(user);
 	}
 
 }

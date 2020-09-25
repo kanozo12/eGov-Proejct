@@ -17,14 +17,8 @@ package egovframework.example.sample.web;
 
 import java.util.List;
 
-import egovframework.example.sample.service.EgovSampleService;
-import egovframework.example.sample.service.SampleDefaultVO;
-import egovframework.example.sample.service.SampleVO;
-
-import egovframework.rte.fdl.property.EgovPropertyService;
-import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
-
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,6 +30,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springmodules.validation.commons.DefaultBeanValidator;
+
+import egovframework.example.domain.MainSlideItemVO;
+import egovframework.example.domain.SampleFreeVO;
+import egovframework.example.domain.SampleListVO;
+import egovframework.example.sample.service.EgovSampleService;
+import egovframework.example.sample.service.MainPageService;
+import egovframework.example.sample.service.SampleDefaultVO;
+import egovframework.example.sample.service.SampleVO;
+import egovframework.rte.fdl.property.EgovPropertyService;
+import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 /**
  * @Class Name : EgovSampleController.java
@@ -58,6 +62,9 @@ public class EgovSampleController {
 	/** EgovSampleService */
 	@Resource(name = "sampleService")
 	private EgovSampleService sampleService;
+	
+	@Resource(name = "mainPageService")
+	private MainPageService mainPageService;
 
 	/** EgovPropertyService */
 	@Resource(name = "propertiesService")
@@ -76,12 +83,30 @@ public class EgovSampleController {
 	 * @exception Exception
 	 */
 
-	@RequestMapping(value = "/main.do")
-	public String mainPage() {
+	@RequestMapping(value = "/main.do", method=RequestMethod.GET)
+	public String mainPage1(Model model, HttpServletRequest req) {
+
+		List<SampleListVO> list = mainPageService.sampleList();
+		List<SampleFreeVO> free = mainPageService.sampleFree();
+		List<MainSlideItemVO> slideItem = mainPageService.getSlideItem();
+		
+		model.addAttribute("list", list);
+		model.addAttribute("free", free);
+		model.addAttribute("slideItem", slideItem);
+
 		return "main.page";
 	}
-	@RequestMapping(value = "/")
-	public String mainPage1() {
+	@RequestMapping(value = "/", method=RequestMethod.GET)
+	public String mainPage(Model model, HttpServletRequest req) {
+
+		List<SampleListVO> list = mainPageService.sampleList();
+		List<SampleFreeVO> free = mainPageService.sampleFree();
+		List<MainSlideItemVO> slideItem = mainPageService.getSlideItem();
+
+		model.addAttribute("list", list);
+		model.addAttribute("free", free);
+		model.addAttribute("slideItem", slideItem);
+
 		return "main.page";
 	}
 

@@ -67,7 +67,7 @@ public class UserController {
 		return "user/registerPage.page";
 	}
 
-	@RequestMapping(value = "register", method = RequestMethod.POST)
+	@RequestMapping(value = "register.do", method = RequestMethod.POST)
 	public String userRegist(RegisterDTO dto, Errors errors) throws Exception {
 		validator.validate(dto, errors);
 		if (errors.hasErrors()) {
@@ -84,7 +84,7 @@ public class UserController {
 		user.setPassword(dto.getPassword());
 		user.setUserid(dto.getUserid());
 
-		service.register(user);
+		service.insertUser(user);
 
 		return "redirect:/"; // 회원가입완료후 메인 페이지로 이동
 	}
@@ -92,7 +92,7 @@ public class UserController {
 	@RequestMapping(value = "logout", method = RequestMethod.GET)
 	public String userLogout(HttpSession session, UserVO user, Model model) {
 		session.removeAttribute("user");
-		return "redirect:main.do";
+		return "main.page";
 	}
 
 }

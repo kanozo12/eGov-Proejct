@@ -18,7 +18,7 @@
 	                <a class="nav-link" href="/">Home</a>
 	            </li>
 	            <li class="nav-item">
-	                <a class="nav-link" href="/board/list">CodeBook</a>
+	                <a class="nav-link" href="/board/list.do">CodeBook</a>
 	            </li>
 	            <li class="nav-item">
 	                <a class="nav-link"a href="/board/list2">FreeBoard</a>

@@ -7,6 +7,9 @@
 		<typeAlias alias="searchVO" type="egovframework.example.sample.service.SampleDefaultVO"/>
 		<typeAlias alias="sampleVO" type="egovframework.example.sample.service.SampleVO"/>
 		<typeAlias alias="userVO" type="egovframework.example.domain.UserVO"/>
-		
+		<typeAlias alias="boardVO" type="egovframework.example.domain.BoardVO"/>
+		<typeAlias alias="samplelistVO" type="egovframework.example.domain.SampleListVO"/>
+		<typeAlias alias="samplefreeVO" type="egovframework.example.domain.SampleFreeVO"/>
+		<typeAlias alias="mainslideitemVO" type="egovframework.example.domain.MainSlideItemVO"/>
     </typeAliases>
 </configuration>

@@ -15,7 +15,6 @@
  */
 package egovframework.example.sample.service.impl;
 
-import egovframework.example.domain.LoginVO;
 import egovframework.example.domain.UserVO;
 import egovframework.rte.psl.dataaccess.mapper.Mapper;
 
@@ -39,6 +38,6 @@ public interface UserMapper {
 
 	UserVO loginUser(UserVO vo) throws Exception;
 	
-	void register(UserVO user) throws Exception;
+	void insertUser(UserVO user) throws Exception;
 
 }
