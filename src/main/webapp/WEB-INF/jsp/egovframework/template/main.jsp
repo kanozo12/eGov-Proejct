@@ -15,7 +15,7 @@
 					<img src="/images/egovframework/main_page/bg2.jpg">
 				</div>
 				<div class="swiper-slide">
-					<img src=/images/egovframework/main_page/bg3.jpg">
+					<img src="/images/egovframework/main_page/bg3.jpg">
 				</div>
 			</div>
 
@@ -35,7 +35,7 @@
 						<div class="swiper-slide">
 							<div class="slide-item">
 								<div class="img">
-									<img src="/images/egovframework/main_page/sample1.jpg">
+									<img src="/images/egovframework/main_page/default-image.png">
 								</div>
 								<div class="content">${slideItem[i].content}</div>
 							</div>
