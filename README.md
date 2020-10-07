@@ -12,3 +12,6 @@ https://m.blog.naver.com/PostView.nhn?blogId=bg_ellder&logNo=98758399&proxyRefer
 url 패턴 변경 .do -> /*
 https://nayoungkim0918.github.io/2019/03/10/Project/PJ-WEB-eGov-04-6/
 게시판 
+
+https://olc.kr/main/search.jsp?s_keyword=egovframe&x=0&y=0
+전자정부프레임워크 
